@@ -162,8 +162,20 @@ namespace Calculadora
         }
         // botao Resultado
         private void btn_Resultado_Click(object sender, EventArgs e)
-        {
-            txt_Resultado.Text = resultado.ToString();
+        {   // criando variaveis
+            double n1, n2 , resultado1;
+            // convertendo as variaveis
+            n1 = Convert.ToDouble(lb_Resultado.Text);
+            n2 = double.Parse(txt_Resultado.Text);
+
+            // verificando se operacao selecionado é soma
+            if(operacao== Soma)
+            {
+                resultado1 = n1 + n2;
+                txt_Resultado.Text = resultado1.ToString();
+                lb_Resultado.Text = resultado1.ToString();
+            }
+           
         }
 
         //botão Limpar Tudo
